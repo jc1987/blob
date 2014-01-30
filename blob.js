@@ -1181,8 +1181,8 @@
   }
 
   var env; 
-  var width = 600.0; 
-  var height = 400.0; 
+  var width = 1000.0; 
+  var height = 800.0; 
   var scaleFactor = 200.0; 
   var blobColl; 
   var gravity; 
@@ -1385,17 +1385,24 @@
   }
   
 
+function goSplit(){
+
+  for (var i=0;i<10;i++)
+  { 
+    blobColl.split(); 
+  }
+
+}
 
 
+function GESGES(){
+  $("#logo").append('<canvas id="blob" width="800" height="800"></canvas>');
 
+  setInterval(function(){
+  goSplit();
+  toggleGravity(); 
+  },30000);
 
+  
+}
 
-
-
-	for (var i=0;i<10;i++)
-	{ 
-		blobColl.split(); 
-	}
-
-
-toggleGravity(); 
