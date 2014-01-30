@@ -1398,14 +1398,15 @@ function goSplit(){
 function GESGES(){
 
   setInterval(function(){
-            goSplit();
-            toggleGravity(); 
+            
             },3000);
 }
 
-$("#logo").append('<canvas id="blob" style="position:absolute; z-index:100000; height:100%; width:100%;"width="800" height="800"></canvas>');
+$("#head").append('<canvas id="blob" style="position:absolute; z-index:100000; height:100%; width:100%; left:0px; top:100px;" width="800" height="800"></canvas>');
 GESGES();
 init();
 $( "document" ).click(function() {
     goSplit();
+    goSplit();
+            toggleGravity(); 
 });
