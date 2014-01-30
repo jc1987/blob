@@ -1387,7 +1387,7 @@
 
 function goSplit(){
 
-  for (var i=0;i<10;i++)
+  for (var i=0;i<6;i++)
   { 
     blobColl.split(); 
   }
@@ -1396,13 +1396,16 @@ function goSplit(){
 
 
 function GESGES(){
-  $("#logo").append('<canvas id="blob" width="800" height="800"></canvas>');
 
   setInterval(function(){
-  goSplit();
-  toggleGravity(); 
-  },30000);
-
-  
+            goSplit();
+            toggleGravity(); 
+            },3000);
 }
 
+$("#logo").append('<canvas id="blob" style="position:absolute; z-index:100000; height:100%; width:100%;"width="800" height="800"></canvas>');
+GESGES();
+init();
+$( "document" ).click(function() {
+    goSplit();
+});
