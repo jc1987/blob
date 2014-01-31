@@ -759,6 +759,12 @@
     } 
     this.drawFace = function(ctx, scaleFactor)
     {
+
+
+      var img= document.createElement('img');
+      img.src= "http://www.greenedu.com/img/leed-green-associate.png";
+      ctx.drawImage(img,10,10);
+
       if(this.drawFaceStyle == 1 && Math.random() < 0.05)
       {
         this.drawFaceStyle = 2; 
@@ -825,6 +831,10 @@
       ctx.beginPath(); 
       ctx.moveTo(this.pointMasses[0].getXPos() * scaleFactor, 
         this.pointMasses[0].getYPos() * scaleFactor); 
+
+
+
+
 
       for(i = 0; i < this.pointMasses.length; i++)
       {
@@ -1405,6 +1415,8 @@ function GESGES(){
 $("#head").append('<canvas id="blob" style="position:absolute; z-index:100000; height:100%; width:100%; left:0px; top:100px;" width="800" height="800"></canvas>');
 GESGES();
 init();
+
+
 $( "document" ).click(function() {
     goSplit();
     goSplit();
