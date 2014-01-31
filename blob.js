@@ -760,8 +760,7 @@
     this.drawFace = function(ctx, scaleFactor)
     {
 
-      ctx.drawImage(img,10,10);
-
+      
       if(this.drawFaceStyle == 1 && Math.random() < 0.05)
       {
         this.drawFaceStyle = 2; 
